@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+* {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body[data-theme="theme1"] {
+  --color1: #000000;
+  --color2: #3D0000;
+  --color3: #950101;
+  --color4: #FF0000;
+}
+
+body[data-theme="theme2"] {
+  --color1: #222831;
+  --color2: #393E46;
+  --color3: #FD7014;
+  --color4: #EEEEEE;
+}
+
+body[data-theme="theme3"] {
+  --color1: #000000;
+  --color2: #86003C;
+  --color3: #E41F7B;
+  --color4: #FF8BA0;
+}
+
+body[data-theme="theme4"] {
+  --color1: #222831;
+  --color2: #393E46;
+  --color3: #00ADB5;
+  --color4: #00FFF5;
+}
+
+body[data-theme="theme5"] {
+  --color1: #000000;
+  --color2: #3E065F;
+  --color3: #700B97;
+  --color4: #8E05C2;
+}
+
+body {
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.theme-switch {
+  position: fixed;
+  top: 1%;
+  left: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.theme-switch span {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 1em;
+  background: var(--color1);
+  color: #FBFBFB;
+  margin: 1em;
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #eceeee;
+}
+
+.container .phone {
+  width: 350px;
+  height: 90vh;
+  border: 10px solid #b7dde2;
+  border-radius: 40px;
+  background-color: var(--color1);
+  color: #FBFBFB;
+  position: relative;
+  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container .phone .notch {
+  width: 45%;
+  height: 15px;
+  background-color: #b7dde2;
+  border-radius: 0 0 1em 1em;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.header {
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .left p {
+  margin-bottom: 0em;
+}
+
+.header .left h2 {
+  margin-top: 0;
+}
+
+.header .right {
+  background-color: #FBFBFB;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  color: var(--color1);
+  border-radius: 50%;
+  font-size: large;
+  font-weight: bold;
+}
+
+.search {
+  margin: 0 1em 1em 1em;
+  background: #FBFBFB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1em;
+  padding: 0 4px;
+  border-radius: 8px;
+  overflow: hidden;
+  color: var(--color1);
+}
+
+.search input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+
+.carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  margin: 2em 0 2em 1em;
+  overflow-x: auto;
+}
+
+.carousel .slide {
+  min-width: 70%;
+  height: 150px;
+  border-radius: 1em;
+  overflow: hidden;
+  background-color: var(--color3);
+}
+
+.carousel .slide:nth-child(even) {
+  background-color: var(--color4);
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.cards {
+  margin: 1em;
+}
+
+.cards .card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr 1fr;
+      grid-template-columns: 1fr 4fr 1fr;
+  place-items: center;
+  gap: 1em;
+  margin-bottom: 0.5em;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.cards .card img {
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.cards .card .desc {
+  width: 100%;
+}
+
+.cards .card .desc h4, .cards .card .desc p {
+  margin: 0;
+}
+
+.cards .card .desc p {
+  font-size: small;
+  opacity: 0.8;
+}
+
+.cards .card:nth-child(2) {
+  background-color: rgba(100, 100, 100, 0.3);
+}
+/*# sourceMappingURL=styles.css.map */

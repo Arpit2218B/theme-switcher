@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Switcher</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="theme1">
+    <div class="container">
+        <div class="theme-switch">
+            <span id="theme1">Theme 1</span>
+            <span id="theme2">Theme 2</span>
+            <span id="theme3">Theme 3</span>
+            <span id="theme4">Theme 4</span>
+            <span id="theme5">Theme 5</span>
+        </div>
+
+        <div class="phone">
+
+            <span class="notch"></span>
+            
+            <div class="header">
+                <div class="left">
+                    <p>Hi Arpit! 👋</p>
+                    <h2>Welcome back!</h2>
+                </div>
+                <span class="right">=</span>
+            </div>
+
+            <div class="search">
+                <span>O</span>
+                <input type="text" placeholder="Search">
+            </div>
+
+            <div class="carousel">
+                <div class="slide">
+                </div>
+                <div class="slide">
+                </div>
+                <div class="slide">
+                </div>
+                <div class="slide">
+                </div>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="">
+                    <div class="desc">
+                        <h4>Red Notice</h4>
+                        <p>Thriller</p>
+                    </div>
+                    <p class="price">$12</p>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="">
+                    <div class="desc">
+                        <h4>Red Notice</h4>
+                        <p>Thriller</p>
+                    </div>
+                    <p class="price">$12</p>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="">
+                    <div class="desc">
+                        <h4>Red Notice</h4>
+                        <p>Thriller</p>
+                    </div>
+                    <p class="price">$12</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const themeSwitchButton = document.querySelector('.theme-switch');
+        themeSwitchButton.addEventListener('click', function(e) {
+            const theme = e.target.id;
+            if(!theme)
+                return;
+            document.body.setAttribute('data-theme', theme);
+        });
+    </script>
+</body>
+</html>
